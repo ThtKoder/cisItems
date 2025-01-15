@@ -11,7 +11,7 @@ class StoreTester {
         Store bookTester = new Store();
         Book book = new Book();
         bookTester.addBook(book);
-        assertTrue(true);
+        assertTrue(bookTester.getItems(Book.class).size() == 1);
     }
 
     @Test
@@ -19,7 +19,7 @@ class StoreTester {
         Store phoneTester = new Store();
         Phone phone = new Phone();
         phoneTester.addPhone(phone);
-        assertTrue(true);
+        assertTrue(phoneTester.getItems(Phone.class).size() == 1);
     }
 
     @Test
@@ -48,7 +48,7 @@ class StoreTester {
         assertEquals(processedPhones.get(1).getLocation(),"Room 512");
         assertEquals(processedPhones.get(2).getLocation(),"Room 512");
 
-        assertTrue(true);
+        assertTrue(phoneTester.getItems(Phone.class).size() == 3);
     }
 
     @Test
